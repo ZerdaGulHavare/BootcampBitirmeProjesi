@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#F9F9F9">
+
+    <!-- Yemek Fotoğrafı -->
+    <ImageView
+        android:id="@+id/ivFoodImage"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Yemek Fotoğrafı"
+        android:background="@drawable/image_background_rounded"
+        android:clipToOutline="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Ürün Adı -->
+    <TextView
+        android:id="@+id/tvFoodName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Yemek Adı"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#222222"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/ivFoodImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Ürün Detayları (örneğin açıklama) -->
+    <TextView
+        android:id="@+id/tvFoodDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Yemek açıklaması burada yer alacak."
+        android:textSize="16sp"
+        android:textColor="#555555"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="4dp"
+        app:layout_constraintTop_toBottomOf="@id/tvFoodName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Adet seçimi -->
+    <TextView
+        android:id="@+id/tvQuantityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adet:"
+        android:textSize="18sp"
+        android:textColor="#444444"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toBottomOf="@id/tvFoodDescription"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etQuantity"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:text="1"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:background="@drawable/edittext_rounded_bg"
+        android:layout_marginStart="12dp"
+        android:padding="6dp"
+        app:layout_constraintTop_toBottomOf="@id/tvFoodDescription"
+        app:layout_constraintStart_toEndOf="@id/tvQuantityLabel" />
+
+    <!-- Sepete ekle butonu -->
+    <Button
+        android:id="@+id/btnAddToCart"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="Sepete Ekle"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#5739D9"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-medium"
+        android:elevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/etQuantity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
